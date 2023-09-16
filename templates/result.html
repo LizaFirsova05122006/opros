@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="topnav">
+  <a href="http://127.0.0.1:5000/">Главная</a>
+  <a href="http://127.0.0.1:5000/opros">Опрос</a>
+  <a class="active" href="http://127.0.0.1:5000/result">Результаты опроса</a>
+  <a href="https://continuous-far-honeysuckle.glitch.me/">Сайт</a>
+</div>
+<form class="login_form">
+  <h1>Всего приняло участие: {{people}} человек</h1>
+  <h1>Вопрос № 1</h1>
+  <h2>Часто ли Вы путешествуете?</h2>
+  <div class="pie animate" style="--p:{{value1}};--c:lightgreen"> Да</div>
+  <div class="pie animate" style="--p:{{value2}};--c:red"> Нет</div>
+  <h2>Проголосовало "Да": {{value1}}%</h2>
+  <h2>Проголосовало "Нет": {{value2}}%</h2>
+  <h1></h1>
+  <h1></h1>
+  <h1>Вопрос № 2</h1>
+  <h2>Как думаете, создание похожих информационных ресурсов поможет сократить время поиска информации?</h2>
+  <div class="pie animate" style="--p:{{value3}};--c:lightgreen"> Да</div>
+  <div class="pie animate" style="--p:{{value4}};--c:red"> Нет</div>
+  <h2>Проголосовало "Да": {{value3}}%</h2>
+  <h2>Проголосовало "Нет": {{value4}}%</h2>
+  <h1></h1>
+  <h1></h1>
+  <h1>Вопрос № 3</h1>
+  <h2>Знакомы ли Вам иные похожие информационные ресурсы?</h2>
+  <div class="pie animate" style="--p:{{value5}};--c:lightgreen"> Да</div>
+  <div class="pie animate" style="--p:{{value6}};--c:red"> Нет</div>
+  <h2>Проголосовало "Да": {{value5}}%</h2>
+  <h2>Проголосовало "Нет": {{value6}}%</h2>
+  <h1></h1>
+  <h1></h1>
+  <h1>Вопрос № 4</h1>
+  <h2>Пользуетесь ли Вы такими информационными ресурсами, когда собираетесь в путешествие?</h2>
+  <div class="pie animate" style="--p:{{value7}};--c:lightgreen"> Да</div>
+  <div class="pie animate" style="--p:{{value8}};--c:red"> Нет</div>
+  <h2>Проголосовало "Да": {{value7}}%</h2>
+  <h2>Проголосовало "Нет": {{value8}}%</h2>
+</form>
+{% endblock %}}

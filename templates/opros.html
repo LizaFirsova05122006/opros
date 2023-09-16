@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="topnav">
+  <a href="http://127.0.0.1:5000/">Главная</a>
+  <a class="active" href="http://127.0.0.1:5000/opros">Опрос</a>
+  <a href="http://127.0.0.1:5000/result">Результаты опроса</a>
+  <a href="https://continuous-far-honeysuckle.glitch.me/">Сайт</a>
+</div>
+<div style="float: left;">
+    <form class="login_form" method="post">
+      <h1>Форма обратной связи</h1>
+        <div class="form-group">
+            <label><h2>1) Часто ли Вы путешествуете?</h2></label>
+            <input type="text" pattern="[А-Яа-яЁё]{2,3}" name="question1" placeholder="Введите Да или Нет" class="form-control" required>
+        </div>
+        <h1></h1>
+        <h1></h1>
+        <div class="form-group">
+            <label><h2>2) Как думаете, создание похожих информационных ресурсов поможет сократить время поиска информации?</h2></label>
+            <input type="text" pattern="[А-Яа-яЁё]{2,3}" name="question2" placeholder="Введите Да или Нет" class="form-control" required>
+        </div>
+        <h1></h1>
+        <h1></h1>
+        <div class="form-group">
+            <label><h2>3) Знакомы ли Вам иные похожие информационные ресурсы? Есла да, то привидите пример</h2></label>
+            <input type="text" pattern="[А-Яа-яЁё]{2,3}" name="question3" placeholder="Введите Да или Нет" class="form-control" required>
+            <textarea name="comment3" id="comment"
+                placeholder="Приведите примеры">
+            </textarea>
+        </div>
+        <h1></h1>
+        <h1></h1>
+        <div class="form-group">
+            <label><h2>4) Пользуетесь ли Вы такими информационными ресурсами, когда собираетесь в путешествие?</h2></label>
+            <input type="text" pattern="[А-Яа-яЁё]{2,4}" name="question4" placeholder="Введите Да или Нет" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">
+							Отправить
+						</button>
+    </form>
+</div>
+{% endblock %}}
